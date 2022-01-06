@@ -1,7 +1,9 @@
 <div class="row">
     <div class="col-md-4">
         <h5>Upload</h5>
-        <div appNgDrpoFiles (mouseOn)="isOnDrop = $event" class="well drop-zone" [ngClass]="{'file-over': isOnDrop }">
+        <!-- despues de validar los archivos, los guardamos en el component -->
+        <!-- para eso los traemos desde la directiva y lo igualamos al component con [files]="files" -->
+        <div appNgDrpoFiles [files]="files" (mouseOn)="isOnDrop = $event" class="well drop-zone" [ngClass]="{'file-over': isOnDrop }">
             <h6>Drag and drop the files here.</h6>
             <img src="assets/img/drop-images.png">
         </div>

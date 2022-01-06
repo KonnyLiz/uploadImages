@@ -9,12 +9,14 @@ import { UploadComponent } from './components/upload/upload.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotosComponent,
-    UploadComponent
+    UploadComponent,
+    NgDropFilesDirective
   ],
   imports: [
     BrowserModule,

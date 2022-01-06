@@ -10,6 +10,9 @@ import { UploadImagesService } from 'src/app/services/upload-images.service';
 })
 export class UploadComponent implements OnInit {
 
+  isOnDrop: boolean = false;
+  // para tener presente cuando esta sobre el area de carga
+
   files: FileItem[] = [];
 
   constructor(
@@ -21,6 +24,10 @@ export class UploadComponent implements OnInit {
 
   uploadImg() {
     this._uploadService.uploadImgForebase(this.files);
+  }
+
+  overElement(event: any){
+    console.log(event);
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-4">
         <h5>Upload</h5>
-        <div class="well drop-zone">
+        <div appNgDrpoFiles (mouseOn)="isOnDrop = $event" class="well drop-zone" [ngClass]="{'file-over': isOnDrop }">
             <h6>Drag and drop the files here.</h6>
             <img src="assets/img/drop-images.png">
         </div>

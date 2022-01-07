@@ -128,7 +128,7 @@ export class NgDropFilesDirective {
       return false;
     } else {
       return typeFile.startsWith('image');
-      // retorna un -1 si es false 0 1 si es true
+      // retorna un -1 si es false o 1 si es true
     }
   }
 

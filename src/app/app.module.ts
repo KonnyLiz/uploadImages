@@ -8,6 +8,7 @@ import { UploadComponent } from './components/upload/upload.component';
 // importando librerias de firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from 'src/environments/environment';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
@@ -22,6 +23,7 @@ import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     APP_ROUTES
   ],
   providers: [],

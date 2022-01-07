@@ -15,7 +15,7 @@
         <button class="btn btn-success me-1" (click)="uploadImg()" [disabled]="files.length === 0">
             Upload to Firebase
         </button>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger" (click)="cleanAll()">
             Clean
         </button>
 
@@ -29,12 +29,15 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>lol</td>
-                    <td>1.2kb</td>
+                <tr *ngFor="let f of files">
+                    <td>{{ f.archiveName }}</td>
+
+                    <!-- el tamano viene en bytes por lo que hay que convertirlo a MB -->
+                    <!-- lo redondeamos a 2 decimales -->
+                    <td>{{ (f.archive.size / 1024) / 1024 | number: '.2-2'}} MB</td> 
                     <td>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+                            <div class="progress-bar" role="progressbar" [ngStyle]="{'width': f.progress + '%'}"></div>
                           </div>
                     </td>
                 </tr>

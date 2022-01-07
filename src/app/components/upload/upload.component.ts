@@ -30,4 +30,8 @@ export class UploadComponent implements OnInit {
     console.log(event);
   }
 
+  cleanAll(){
+    this.files = [];
+  }
+
 }

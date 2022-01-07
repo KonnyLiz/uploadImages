@@ -30,7 +30,10 @@
 
             <tbody>
                 <tr *ngFor="let f of files">
-                    <td>{{ f.archiveName }}</td>
+                    <!-- cuando haya terminado la carga cambiamos el texto a verde -->
+                    <td [ngClass]="{'text-green': f.progress >= 100 }">
+                        {{ f.archiveName }}
+                    </td>
 
                     <!-- el tamano viene en bytes por lo que hay que convertirlo a MB -->
                     <!-- lo redondeamos a 2 decimales -->
